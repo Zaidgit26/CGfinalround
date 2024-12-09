@@ -1,0 +1,157 @@
+/* Video background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;  /* Place behind content */
+}
+
+#bg-video {
+    object-fit: cover; /* Ensure video covers the entire screen */
+    width: 100%;
+    height: 100%;
+}
+
+/* Global styling */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Hacker-style font */
+    margin: 0;
+    padding: 0;
+    background: #121212; /* Dark background */
+    color: #00ff00; /* Green text color */
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Background dimming for inactive sections */
+.hidden-dimmed {
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay for inactive sections */
+    position: fixed; /* Cover the entire screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Below visible content */
+}
+
+/* Form container styles */
+.form-container, .dashboard-container {
+    max-width: 450px;
+    margin: 80px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7); /* Slightly dark background */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.5); /* Green shadow effect */
+    z-index: 2; /* Ensure it's above dimming */
+    position: relative;
+}
+
+/* Header and text styling */
+h1, h2, p {
+    color: #00ff00; /* Green text for headings */
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Input fields styling */
+input {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #00ff00; /* Green border */
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #121212; /* Dark background for inputs */
+    color: #00ff00; /* Green text for input */
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #32ff32; /* Lighter green border on focus */
+    outline: none;
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    background-color: #00ff00; /* Green button */
+    color: #121212; /* Dark text for button */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #32ff32; /* Light green on hover */
+}
+
+/* Rules section styles */
+#rules {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.5);
+    font-size: 14px;
+}
+
+/* Task container and task styles */
+.task {
+    background-color: #121212;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #00ff00; /* Green border for tasks */
+    box-shadow: 0 2px 4px rgba(0, 255, 0, 0.3);
+}
+
+.task input {
+    background-color: #121212;
+    border: 1px solid #32ff32; /* Light green border for inputs */
+}
+
+/* Status message styling */
+#task-status {
+    color: #32ff32;
+    font-weight: bold;
+}
+
+/* Hide elements by default */
+.hidden {
+    display: none;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .form-container, .dashboard-container {
+        padding: 20px;
+        margin: 20px;
+        width: 100%; /* Make containers full-width on smaller screens */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button text for mobile */
+    }
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller devices */
+    }
+    h1, h2 {
+        font-size: 18px; /* Adjust heading sizes for mobile */
+    }
+    .form-container, .dashboard-container {
+        margin-top: 10px; /* Less margin on mobile */
+    }
+}
